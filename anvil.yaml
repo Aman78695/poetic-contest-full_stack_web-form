@@ -1,9 +1,30 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+package_name: Poetic_Contest_Web_Form
 allow_embedding: false
-package_name: M3_App_2
-name: M3 App 2
-startup_form: Form1
-renamed: true
+name: Poetic Contest Web Form
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-dependencies: []
-services: []
+startup_form: Form1
+db_schema:
+  poetry:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: poem
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: time
+      admin_ui: {width: 200, order: 3}
+      type: datetime
+    title: poetry
+renamed: true

@@ -1,14 +1,57 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: ''}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PVFKCG,QEXYMM'}
+    components:
+    - name: label_1
+      properties: {text: Welcome to poetry contest 2024!!!, icon: 'fa:book', role: headline,
+        font_size: -6}
+      type: Label
+      layout_properties: {grid_position: 'NWLLWV,JXRLBY'}
+    - name: label_2
+      properties: {text: 'To participate in the contest, please go below and submit
+          the form.....Your poem should not be more than 200 words.
+
+
+          Once submitted we will contact you shortly.'}
+      type: Label
+      layout_properties: {grid_position: 'HVTOOP,VXNEQA'}
+  - name: image_1
+    properties: {source: _/theme/Poetry-Teaching-and-Learning-at-Sharon-School.jpg,
+      height: 270.77777099609375}
+    type: Image
+    layout_properties: {grid_position: 'PVFKCG,NHTHSN'}
+  - name: label_3
+    properties: {text: 'Poem Submission, Please fill the details below.', role: title,
+      align: center, bold: true, background: 'theme:Primary', foreground: 'theme:On
+        Primary', icon: 'fa:angle-double-down'}
+    type: Label
+    layout_properties: {grid_position: 'ISATID,OAINDA'}
+  - name: name
+    properties: {placeholder: Enter Your name here}
+    type: TextBox
+    layout_properties: {grid_position: 'UVQLVE,YQEEGN'}
+  - name: email
+    properties: {placeholder: Enter Your Email here}
+    type: TextBox
+    layout_properties: {grid_position: 'VCULBS,YHNZBL'}
+  - name: poem
+    properties: {text: Your Poem here, visible: true}
+    type: TextArea
+    layout_properties: {grid_position: 'DIBGHQ,ONVDZY'}
+  - name: button_1
+    properties: {text: Submit, font_size: 22, bold: true, background: '#b92d57', foreground: 'theme:On
+        Primary'}
+    type: Button
+    layout_properties: {grid_position: 'DTWGFI,DRJALA'}
+    event_bindings: {click: button_1_click}
